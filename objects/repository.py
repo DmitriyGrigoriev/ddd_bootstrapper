@@ -3,9 +3,9 @@ from typing import Dict
 
 import attr
 
-from ddd_bootsrapper.objects.repository_in_memory import RepositoryInMemory
-from ddd_bootsrapper.objects.repository_interface import RepositoryInterface
-from ddd_bootsrapper.utils import INFRASTRUCTURE_PATH, DddObject, AttributeName
+from ddd_bootstrapper.objects.repository_in_memory import RepositoryInMemory
+from ddd_bootstrapper.objects.repository_interface import RepositoryInterface
+from ddd_bootstrapper.utils import INFRASTRUCTURE_PATH, DddObject, AttributeName
 
 
 @attr.dataclass(slots=True, frozen=True)

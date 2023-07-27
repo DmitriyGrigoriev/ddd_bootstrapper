@@ -3,8 +3,8 @@ from typing import Dict
 
 import attr
 
-from ddd_bootsrapper.objects.translator_interface import TranslatorInterface
-from ddd_bootsrapper.utils import DddObject, INFRASTRUCTURE_PATH, AttributeName
+from ddd_bootstrapper.objects.translator_interface import TranslatorInterface
+from ddd_bootstrapper.utils import DddObject, INFRASTRUCTURE_PATH, AttributeName
 
 
 @attr.dataclass(slots=True, frozen=True)

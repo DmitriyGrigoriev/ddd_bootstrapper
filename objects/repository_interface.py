@@ -3,10 +3,10 @@ from typing import Dict
 
 import attr
 
-from ddd_bootsrapper.objects.aggregate import Aggregate
-from ddd_bootsrapper.objects.dto import DTO
-from ddd_bootsrapper.objects.entity_identity import EntityIdentity
-from ddd_bootsrapper.utils import DDD_LOGIC_PATH, DddObject, AttributeName
+from ddd_bootstrapper.objects.aggregate import Aggregate
+from ddd_bootstrapper.objects.dto import DTO
+from ddd_bootstrapper.objects.entity_identity import EntityIdentity
+from ddd_bootstrapper.utils import DDD_LOGIC_PATH, DddObject, AttributeName
 
 
 @attr.dataclass(slots=True, frozen=True)

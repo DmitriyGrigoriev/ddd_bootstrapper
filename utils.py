@@ -8,7 +8,7 @@ from enum import Enum
 
 import attr
 
-from ddd_bootsrapper.osis_license import get_osis_license
+from ddd_bootstrapper.osis_license import get_osis_license
 
 DDD_LOGIC_PATH = "ddd/logic"
 INFRASTRUCTURE_PATH = "infrastructure"
@@ -41,7 +41,7 @@ class DddobjectsFactory(abc.ABC):
 
     @staticmethod
     def identify(namespace) -> typing.List['DddObject']:
-        from ddd_bootsrapper.objects.aggregate import Aggregate
+        from ddd_bootstrapper.objects.aggregate import Aggregate
         ddd_objects_classes = [
             Aggregate,
         ]
@@ -183,5 +183,5 @@ def is_empty(filename: str) -> bool:
 
 
 def back_to_main_folder() -> None:
-    from ddd_bootsrapper.launcher import CURRENT_DIR
+    from ddd_bootstrapper.launcher import CURRENT_DIR
     os.chdir(CURRENT_DIR)

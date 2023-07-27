@@ -2,24 +2,24 @@ from typing import Type, List
 
 import attr
 
-from ddd_bootsrapper.objects.aggregate import Aggregate
-from ddd_bootsrapper.objects.business_exception import BusinessException
-from ddd_bootsrapper.objects.command import Command
-from ddd_bootsrapper.objects.domain_service import DomainService
-from ddd_bootsrapper.objects.dto import DTO
-from ddd_bootsrapper.objects.query import Query
-from ddd_bootsrapper.objects.repository import Repository
-from ddd_bootsrapper.objects.repository_in_memory import RepositoryInMemory
-from ddd_bootsrapper.objects.repository_interface import RepositoryInterface
-from ddd_bootsrapper.objects.translator import Translator
-from ddd_bootsrapper.objects.translator_in_memory import TranslatorInMemory
-from ddd_bootsrapper.objects.translator_interface import TranslatorInterface
-from ddd_bootsrapper.objects.use_case_read import UseCaseRead
-from ddd_bootsrapper.objects.use_case_write import UseCaseWrite
-from ddd_bootsrapper.objects.validator import Validator
-from ddd_bootsrapper.objects.validator_list import ValidatorList
-from ddd_bootsrapper.objects.value_object import ValueObject
-from ddd_bootsrapper.utils import DddObject
+from ddd_bootstrapper.objects.aggregate import Aggregate
+from ddd_bootstrapper.objects.business_exception import BusinessException
+from ddd_bootstrapper.objects.command import Command
+from ddd_bootstrapper.objects.domain_service import DomainService
+from ddd_bootstrapper.objects.dto import DTO
+from ddd_bootstrapper.objects.query import Query
+from ddd_bootstrapper.objects.repository import Repository
+from ddd_bootstrapper.objects.repository_in_memory import RepositoryInMemory
+from ddd_bootstrapper.objects.repository_interface import RepositoryInterface
+from ddd_bootstrapper.objects.translator import Translator
+from ddd_bootstrapper.objects.translator_in_memory import TranslatorInMemory
+from ddd_bootstrapper.objects.translator_interface import TranslatorInterface
+from ddd_bootstrapper.objects.use_case_read import UseCaseRead
+from ddd_bootstrapper.objects.use_case_write import UseCaseWrite
+from ddd_bootstrapper.objects.validator import Validator
+from ddd_bootstrapper.objects.validator_list import ValidatorList
+from ddd_bootstrapper.objects.value_object import ValueObject
+from ddd_bootstrapper.utils import DddObject
 
 
 DddObjectClass: Type[DddObject]

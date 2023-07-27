@@ -1,7 +1,7 @@
 # TODO
 # import attr
 #
-# from ddd_bootsrapper.utils import DDD_LOGIC_PATH, DddObject
+# from ddd_bootstrapper.utils import DDD_LOGIC_PATH, DddObject
 #
 #
 # @attr.dataclass(slots=True, frozen=True)

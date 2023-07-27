@@ -1,5 +1,5 @@
 def get_osis_license() -> str:
-    from ddd_bootsrapper.utils import TODAY
+    from ddd_bootstrapper.utils import TODAY
     return f"""##############################################################################
 #
 #    OSIS stands for Open Student Information System. It's an application

@@ -1,6 +1,6 @@
 import attr
 
-from ddd_bootsrapper.utils import DddObject, DDD_LOGIC_PATH
+from ddd_bootstrapper.utils import DddObject, DDD_LOGIC_PATH
 
 
 @attr.dataclass(slots=True, frozen=True)

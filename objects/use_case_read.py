@@ -3,9 +3,9 @@ from typing import Dict
 
 import attr
 
-from ddd_bootsrapper.objects.query import Query
-from ddd_bootsrapper.objects.repository_interface import RepositoryInterface
-from ddd_bootsrapper.utils import DddObject, DDD_LOGIC_PATH, convert_camel_case_to_snake_case, AttributeName
+from ddd_bootstrapper.objects.query import Query
+from ddd_bootstrapper.objects.repository_interface import RepositoryInterface
+from ddd_bootstrapper.utils import DddObject, DDD_LOGIC_PATH, convert_camel_case_to_snake_case, AttributeName
 
 
 @attr.dataclass(slots=True, frozen=True)

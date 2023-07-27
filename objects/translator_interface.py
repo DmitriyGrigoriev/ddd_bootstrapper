@@ -3,8 +3,8 @@ from typing import Dict
 
 import attr
 
-from ddd_bootsrapper.objects.value_object import ValueObject
-from ddd_bootsrapper.utils import DddObject, DDD_LOGIC_PATH, AttributeName
+from ddd_bootstrapper.objects.value_object import ValueObject
+from ddd_bootstrapper.utils import DddObject, DDD_LOGIC_PATH, AttributeName
 
 
 @attr.dataclass(slots=True, frozen=True)
