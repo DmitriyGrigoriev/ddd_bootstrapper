@@ -22,7 +22,7 @@ class DTO(DddObject):
     def get_python_class_code_definition(self) -> str:
         return f"""
 
-@attr.s(frozen=True, slots=True, auto_attribs=True)
+@attr.dataclass(frozen=True, slots=True)
 class {self.get_python_class_name()}(interface.DTO):
     integer: int
     string: str

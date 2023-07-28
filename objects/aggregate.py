@@ -32,7 +32,7 @@ class Aggregate(DddObject):
 
 {self.entity_id.get_python_class_code_definition()}
 
-@attr.s(slots=True, auto_attribs=True)
+@attr.dataclass(slots=True)
 class {self.name}(interface.RootEntity):
     entity_id: '{self.entity_id.name}'
 """
