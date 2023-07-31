@@ -162,6 +162,11 @@ def convert_camel_case_to_snake_case(name: str) -> str:
     return re.sub(r'(?<!^)(?=[A-Z])', '_', name).lower()
 
 
+def convert_snake_case_to_camel_case(name: str) -> str:
+    temp = name.split('_')
+    return ''.join(ele.title() for ele in temp)
+
+
 def create__init__py():
     filename = "__init__.py"
     with open(filename, "a+") as f:

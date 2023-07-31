@@ -19,11 +19,14 @@ class Command(DddObject):
     def get_filename_without_extension(self) -> str:
         return "commands"
 
+    def get_python_class_name(self):
+        return f"{self.name}Cmd"
+
     def get_python_class_code_definition(self) -> str:
         return f"""
 
 @attr.dataclass(frozen=True, slots=True)
-class {self.name}(interface.CommandRequest):
+class {self.get_python_class_name()}(interface.CommandRequest):
     integer: int
     string: str
     boolean: bool
