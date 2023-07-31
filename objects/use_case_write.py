@@ -5,7 +5,10 @@ import attr
 
 from ddd_bootstrapper.objects.command import Command
 from ddd_bootstrapper.objects.repository_interface import RepositoryInterface
-from ddd_bootstrapper.utils import DddObject, DDD_LOGIC_PATH, convert_camel_case_to_snake_case, AttributeName
+from ddd_bootstrapper.utils import (
+    DddObject, DDD_LOGIC_PATH, convert_camel_case_to_snake_case, AttributeName,
+    convert_snake_case_to_camel_case,
+)
 
 
 @attr.dataclass(slots=True, frozen=True)
@@ -22,8 +25,9 @@ class UseCaseWrite(DddObject):
             ddd_objects_name: str,
             namespace: 'Namespace',
     ) -> Dict['AttributeName', 'DddObject']:
+        cmd_default_name = convert_snake_case_to_camel_case(ddd_objects_name)
         return {
-            'cmd': Command.build_from_namespace(namespace, default_name=ddd_objects_name),
+            'cmd': Command.build_from_namespace(namespace, default_name=cmd_default_name),
             'i_repository': RepositoryInterface.build_from_namespace(namespace),
         }
 
@@ -38,9 +42,10 @@ class UseCaseWrite(DddObject):
         return f"""
 
 def {convert_camel_case_to_snake_case(self.name)}(
-        cmd: '{self.cmd.name}',
-        repository: '{self.i_repository.get_python_class_name()}',
-) -> '{self.i_repository.aggregate.name}':
+    msg_bus,
+    cmd: '{self.cmd.get_python_class_name()}',
+    repository: '{self.i_repository.get_python_class_name()}',
+) -> '{self.i_repository.aggregate.entity_id.get_python_class_name()}':
     # GIVEN
     identite = {self.i_repository.aggregate.entity_id.name}(cmd)
     {convert_camel_case_to_snake_case(self.i_repository.aggregate.name)} = repository.get(identite) 
